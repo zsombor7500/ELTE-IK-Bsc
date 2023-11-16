@@ -1,5 +1,5 @@
 # ELTE-IK-Bsc, 1. félév Improg cheat sheet
-## Dióhéjban: Szimpla random lényegesebb dolgok amik eszembe jutottak és kérhetnek az első ZH-ban.
+## Dióhéjban: Szimpla random lényegesebb dolgok amik eszembe jutottak és kérhetnek a ZH-ban.
 ### Nem tartalmazza a következőket:
   - Konstansok
   - Pointer aritmetika
