@@ -56,6 +56,7 @@ int main()
     char c = 'a';
     double d = 10.123456789;
 
+  
     // Pointerek, pointer aritmetikát kihagyom úgysem kell vszeg használni.
     int *p; // Pointer deklarálása, a * azt jelenti, hogy pointer, a p pedig a változó neve, amire mutatni fog.
     p = &a; // A pointer mostmár az 'a' nevű int típusú változóra mutat. Lehet deklaráláshoz is írni, tökre mind1.
@@ -67,11 +68,13 @@ int main()
     float tomb2[3] = {0.5, 1.2, 123.123}; // Így is lehet inicializálni
     int tomb3[10] = {0}; // Itt a lényeg a jobb oldalt van, tömböknél lehet egy elemet megadva inicializálni az összes elemét arra. char, float tömb esetén is működik
 
+  
     // Kiírások (változókhoz)
     printf("1. Kiiras: %d %f %s %c\n", a, 0.5, "asd", 'a'); // A %d -> int, %f -> float, %s -> string, %c -> char
     char valamiStr[] = "bohocemoji";
     printf("2. Kiiras: %s\n", valamiStr); // Ha char *-od van ami a char[]-re mutat akkor ugyanígy csak odaírod a változó nevét.
 
+  
     // Beolvasások
     char bekertStr[11];
     fgets(bekertStr, 11, stdin); // Beolvas 10 karaktert, a 11. helyre a '\0'-t teszi, stdin-ről olvas, ez a billentyűzetet jelenti.
@@ -90,13 +93,14 @@ int main()
             printf("Karakter: %c\tAscii kodja:%d", c, c);
         }
     }
-    
 
+  
     // Random szám generálás
     time_t t;
     srand((unsigned) time(&t));
     int randomNum = rand() % 1000; // 0 és 999 között generál egy random számot
 
+  
     // Stringekkel való műveletek
     char str1[] = "teststring";
     char str2[] = "teststringasd";
@@ -116,7 +120,6 @@ void MatrixPelda(int m1[HEIGHT][WIDTH], char m2[][WIDTH])
 {
     static int valami = 0; // Első alkalommal amikor megvan hívva az fv, 0-val inicializálódik a valami nevű változó, de utánna minden fv hívásnál a visszatérés pillanatában
     valami++;              // való értékét őrzi meg, és a következő fv hívásnál már az új értékkel fog indulni. pl.: 1. fv hívásnál 0, 2. fv hívásnál 1, 3. fv hívásnál 2, stb.
-
 
     return; // Voidnál is kiteheted, de nem kötelező
 }
