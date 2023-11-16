@@ -45,6 +45,8 @@ void MatrixPelda(int m1[HEIGHT][WIDTH], char m2[][WIDTH]); // Ilyenkor meg kell 
 //  - Ctrl + Shift + L => Kijelölt szöveg minden előfordulásának kijelölése.
 //  - Ctrl + D => Kijelölt szöveg következő előfordulásának kijelölése, ahányszor megnyomod. Ez meg előtti tippel gyorsan lehet replacelni.
 //
+// Ajánlott forrás: https://learnxinyminutes.com/docs/c/
+//
 //// Sok szerencsét, kéz és láb törést, sikeres ZH-t!
 int main()
 {
