@@ -37,7 +37,8 @@ void MatrixPelda(int m1[HEIGHT][WIDTH], char m2[][WIDTH]); // Ilyenkor meg kell 
 //      NE szánj rá sok időt, CSAK ha kész vagy nem éri meg vele bajlódni!!!
 //  - Legyen több mentésed minden esetre ha egyiket elrontod, akkor vissza tudj menni az előzőre + ha már kezd nagyon lejárni az idő + véletlen törlés esetére
 //      Ezen mentések közt legyen legalább egy amit le tud compileolni a GCC!!! Különben ZH = 0 pont
-//  - Ha szegmentálási hibát dob és barátait akkor érdemes túlindexelésre gondolni, ha nem találod hol hibáztál, akkor a legegyszerűbb main elejéről
+//  - Ha szegmentálási hibát dob és barátait akkor érdemes túlindexelésre gondolni, ha nem találod hol hibáztál, akkor a legegyszerűbb main elejérőlakkor talán a 
+//      legegyszerűbb a main elejéről printf()-et használva random kiíratni valami szöveget VAGY return-ni a mainben megnézni meddig fut le a program.
 //
 // VS Codeos shotcutok:
 //  - Ctrl + LeftAlt + nyilak(fel/le) => Többszörös kurzorozás, több sorba tudsz ugyanoda írni, kibaszott black magic
@@ -76,6 +77,7 @@ int main()
     float bekertFloat;
     char bekertChar;
     scanf("%d %f %c", &bekertInt, &bekertFloat, &bekertChar); // A & jelentése, hogy a változó memóriacímére fog beolvasni. !!!!Első whitespace-ig olvas!!!!
+                                                              // Ha scanf()-et loopban használod érdemes lehet a végére '\n'-t írni, mert különben a \n-t is beolvassa
     // Példa tőlünk ZH-ból, karakterenkénti beolvasás, amíg nem kap enter-t. Ezzel egy sorba több karaktert is megadhatunk és csak a kért karakterekre futtatja a kódunkat, '\n'-t ignorálja 
     char c;
     while (c != EOF) // End-of-File-ig olvas lehet ezt fogja kérni a feladat, ha End-of-Line kér akkor helyette EOL
