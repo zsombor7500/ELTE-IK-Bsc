@@ -12,7 +12,7 @@
 
 ## One-liner Powershell script, ami feltölti az ZH_utravalo.c-t a pandorás szerveres fiókotokon belül az Asztal mappátokba:
 ```ps
-$neptun=read-host -prompt "Neptunkodod";$filen="ZH_utravalo.c";if($neptun.Length -eq 6 -and (select-string -pattern "^[a-zA-Z0-9]{6}$" -inputobject $neptun)){$neptun=$neptun.ToLower();(new-object System.Net.WebClient).DownloadFile("https://github.com/zsombor7500/ELTE-IK-Bsc/blob/main/$filen","$env:temp\$filen");$chrs=$neptun.ToCharArray();invoke-expression "scp $env:temp\$filen $neptun@pandora.inf.elte.hu:/afs/inf.elte.hu/user/$($chrs[0])/$($chrs[0]+$chrs[1])/$neptun/Asztal/$filen";write-host "ZH_utravalo.c, sikeresen fel lett töltve pandora-ra!"}else{write-host "Hibas neptunkod"}
+$n=read-host "Neptunkodod";$f="ZH_utravalo.c";if($n.Length -eq 6 -and ($n|select-string -pattern "^[a-zA-Z0-9]{6}$")){$n=$n.ToLower();(new-object System.Net.WebClient).DownloadFile("https://github.com/zsombor7500/ELTE-IK-Bsc/blob/main/$f","$env:temp\$f");$c=$n.ToCharArray();invoke-expression "scp $env:temp\$f $n@pandora.inf.elte.hu:/afs/inf.elte.hu/user/$($c[0])/$($c[0]+$c[1])/$n/Asztal/$f";write-host "ZH_utravalo.c, sikeresen fel lett töltve pandora-ra!"}else{write-host "Hibas neptunkod"}
 ```
 
 ### Amint kiderült sokaknak nem teljesen tiszta mire kéne a fentebbi parancs. A ZH ideje alatt csak a canvast, a tms-t (vszeg, idk miért), a cpp reference-t, illetve vszeg a helyi fájljaitokat használhatjátok.
