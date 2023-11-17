@@ -98,7 +98,7 @@ int main()
     // Random szám generálás
     time_t t;
     srand((unsigned) time(&t));
-    int randomNum = rand() % 1000; // 0 és 999 között generál egy random számot
+    int randomNum = rand() % 1000; // 0 és 999 között generál egy random számot, modulo (%) miatt
 
   
     // Stringekkel való műveletek
