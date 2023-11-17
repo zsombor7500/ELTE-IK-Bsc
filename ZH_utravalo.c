@@ -13,7 +13,7 @@
 #define HEIGHT 10
 #define WIDTH 10
 
-// Függvény deklarálás
+// Függvény deklarálás, visszatérési értékek, mátrix nincs kifejtve mert szinte esélytelen, hogy kéne használni (de am <típus>** lenne a visszatérési érték)
 void ValamiFunction1();   // Úgy szeretik ha ide az elejére a függvény szignatúráját beírod, majd a forráskód végére, a main után implementálod.
 int ValamiFunction2();    // Figyelj arra hogy változóknak véletlen se legyen ugyanaz a neve mint egy függvénynek! Compile hibát dob különben.
 int * ValamiFunction3();  // Így adsz vissza int tömböt, nem valószínű, hogy kell használni, általában voidot kell a változó átadós részben ki van fejtve miért.
