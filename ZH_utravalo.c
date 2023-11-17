@@ -1,7 +1,7 @@
 // Importálás
-#include <stdio.h> // Alapból kell importálni
-#include <time.h> // Pszeudo véletlenszám generáláshoz szükséges
-#include <string.h> // Stringekkel való műveletekhez
+#include <stdio.h> // Alapból illik importálni
+#include <time.h> // Pszeudo véletlenszám generáláshoz szükséges (seedhez)
+#include <string.h> // Stringekkel való műveletekhez, lentebb mainben ki lesz fejtve
 #include <math.h> // Matematikai műveletek => Kerekítés (ceil(double x) -> felfele, floor(double x) -> lefele), hatványozás (pow(double alap, double kitevo)), abszolútérték (abs(double x))
 #include <stdlib.h> // Pszeudo véletlenszám generáláshoz (srand(unsigned int seed))
                     // Konvertálás (atoi(char *str) -> int-té, atof(char *str) -> float-tá)
@@ -37,15 +37,15 @@ void MatrixPelda(int m1[HEIGHT][WIDTH], char m2[][WIDTH]); // Ilyenkor meg kell 
 //      NE szánj rá sok időt, CSAK ha kész vagy nem éri meg vele bajlódni!!!
 //  - Legyen több mentésed minden esetre ha egyiket elrontod, akkor vissza tudj menni az előzőre + ha már kezd nagyon lejárni az idő + véletlen törlés esetére
 //      Ezen mentések közt legyen legalább egy amit le tud compileolni a GCC!!! Különben ZH = 0 pont
-//  - Ha szegmentálási hibát dob és barátait akkor érdemes túlindexelésre gondolni, ha nem találod hol hibáztál, akkor a legegyszerűbb main elejérőlakkor talán a 
-//      legegyszerűbb a main elejéről printf()-et használva random kiíratni valami szöveget VAGY return-ni a mainben megnézni meddig fut le a program.
+//  - Ha szegmentálási hibát dob és barátait akkor érdemes túlindexelésre gondolni, ha nem találod hol hibáztál, akkor a legegyszerűbb main elejéről, akkor talán a 
+//      legegyszerűbb a main elejéről printf()-et használva random kiíratni valami szöveget VAGY return-ni a mainben, hogy lásd meddig fut le a program.
 //
 // VS Codeos shotcutok:
 //  - Ctrl + LeftAlt + nyilak(fel/le) => Többszörös kurzorozás, több sorba tudsz ugyanoda írni, kibaszott black magic
 //  - Ctrl + Shift + L => Kijelölt szöveg minden előfordulásának kijelölése.
 //  - Ctrl + D => Kijelölt szöveg következő előfordulásának kijelölése, ahányszor megnyomod. Ez meg előtti tippel gyorsan lehet replacelni.
 //
-// Ajánlott forrás: https://learnxinyminutes.com/docs/c/
+// Ajánlott olvasmány: https://learnxinyminutes.com/docs/c/ --> Nyelveket lehet vele mondhatni "speedrunolni"
 //
 //// Sok szerencsét, kéz és láb törést, sikeres ZH-t!
 int main()
